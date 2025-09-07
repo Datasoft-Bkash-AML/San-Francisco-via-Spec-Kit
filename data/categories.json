@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Accessories",
+    "slug": "accessories",
+    "icon": "fas fa-headphones",
+    "image": "/assets/images/categories/accessories.jpg",
+    "product_count": 25
+  },
+  {
+    "id": 2,
+    "name": "Cameras",
+    "slug": "cameras",
+    "icon": "fas fa-camera",
+    "image": "/assets/images/categories/cameras.jpg",
+    "product_count": 18
+  },
+  {
+    "id": 3,
+    "name": "Headphones",
+    "slug": "headphones",
+    "icon": "fas fa-headphones",
+    "image": "/assets/images/categories/headphones.jpg",
+    "product_count": 32
+  },
+  {
+    "id": 4,
+    "name": "Speakers",
+    "slug": "speakers",
+    "icon": "fas fa-volume-up",
+    "image": "/assets/images/categories/speakers.jpg",
+    "product_count": 15
+  },
+  {
+    "id": 5,
+    "name": "Wearables",
+    "slug": "wearables",
+    "icon": "fas fa-watch",
+    "image": "/assets/images/categories/wearables.jpg",
+    "product_count": 22
+  }
+]
