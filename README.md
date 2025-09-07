@@ -1,118 +1,111 @@
-# San Francisco Demo - MVP
+# San Francisco Demo - PHP Implementation
 
-A flexible single-page e-commerce demo built with PHP and JSON data storage.
+A PHP-based replica of the San Francisco demo from Rey theme, featuring modern web development practices and pixel-perfect design matching.
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- PHP 8.x or higher
-- Web browser
+- PHP 8.0 or higher
+- Web server (Apache/Nginx) or PHP built-in server
 
 ### Running the Application
 
-1. **Start the local server:**
+1. **Start PHP development server:**
    ```bash
-   cd /workspaces/San-Francisco-via-Spec-Kit
-   php -S localhost:8000 -t public
+   cd /workspaces/San-Francisco-via-Spec-Kit/public
+   php -S localhost:8000
    ```
 
 2. **Open in browser:**
    - Main site: http://localhost:8000
-   - Admin panel: http://localhost:8000/admin
 
 ## 📁 Project Structure
 
 ```
-├── public/              # Web root
-│   └── index.php        # Main entry point
-├── src/
-│   ├── Controllers/     # PHP controllers
-│   ├── Models/          # Data models
-│   ├── Services/        # Business logic
-│   └── Views/           # HTML templates
+├── public/              # Web root directory
+│   ├── index.php        # Main entry point
+│   ├── assets/          # Static assets (CSS, JS, images)
+│   │   ├── css/         # Stylesheets
+│   │   ├── js/          # JavaScript files
+│   │   └── images/      # Image assets
+├── src/                 # Source files
+│   ├── Views/           # PHP view templates
+│   │   ├── home.php     # Main home page
+│   │   └── admin.php    # Admin interface
+│   ├── Controllers/     # PHP controllers (future)
+│   ├── Models/          # PHP models (future)
+│   └── Services/        # PHP services (future)
 ├── data/                # JSON data files
-│   ├── categories.json  # Product categories
 │   ├── products.json    # Product catalog
+│   ├── categories.json  # Category data
 │   └── settings.json    # Site configuration
-├── assets/              # Static files
-│   ├── css/            # Stylesheets
-│   ├── js/             # JavaScript files
-│   └── images/         # Image assets
-└── config/             # Configuration files
+├── specs/               # Project specifications
+└── San-Francisco/       # Legacy Eleventy files (deprecated)
 ```
 
 ## 🎯 Features
 
 ### Frontend
-- **Responsive Design**: Works on desktop, tablet, and mobile
-- **Product Catalog**: Browse products by category
-- **Interactive Elements**: Hover effects, smooth scrolling
-- **Newsletter Signup**: Email collection form
-- **Add to Cart**: Basic cart functionality (demo alerts)
+- **PHP Backend**: Server-side rendering with PHP 8.x
+- **Rey Theme Styling**: Matches the original Rey theme design
+- **Responsive Design**: Mobile-first approach with responsive breakpoints
+- **Component Architecture**: Modular sections for easy maintenance
+- **Data-Driven**: Uses JSON data files for products and categories
 
-### Admin Panel
-- **Dashboard**: Overview of products and categories
-- **Product Management**: View product list (edit/delete coming soon)
-- **Category Management**: View category list
-- **Settings**: Configure site name, tagline, banners
+### Sections
+- **Header**: Navigation with logo and action buttons
+- **Text Scroller**: Animated announcement banner with Splide
+- **Hero**: Main call-to-action section
+- **Complete Setup**: SITE/SHOP navigation links
+- **Categories**: Product category grid
+- **Discover**: USP links section
+- **Features**: Unique selling points
+- **Products**: New arrivals product grid
+- **Flash Deals**: Time-limited offers with countdown
+- **Footer**: Site links and newsletter signup
 
-### Data Management
-- **JSON Storage**: No database required
-- **Sample Data**: Pre-loaded with demo products and categories
-- **Easy Customization**: Edit JSON files to change content
+## 🔧 Technology Stack
 
-## 🔧 Customization
-
-### Adding Products
-Edit `data/products.json`:
-```json
-{
-  "id": 5,
-  "name": "New Product Name",
-  "brand": "Brand Name",
-  "category_id": 1,
-  "price": 99.99,
-  "image": "/assets/images/products/new-product.jpg"
-}
-```
-
-### Adding Categories
-Edit `data/categories.json`:
-```json
-{
-  "id": 6,
-  "name": "New Category",
-  "slug": "new-category",
-  "icon": "fas fa-star",
-  "product_count": 10
-}
-```
-
-### Site Settings
-Edit `data/settings.json`:
-```json
-{
-  "site_name": "Your Store Name",
-  "tagline": "Your tagline here",
-  "top_banner": "Your banner text"
-}
-```
+- **PHP 8.x**: Server-side processing
+- **HTML5/CSS3**: Modern markup and styling
+- **JavaScript**: Interactive features
+- **Splide**: Carousel/slider functionality
+- **Font Awesome**: Icons
+- **Outfit Font**: Modern typography (Rey theme)
+- **JSON**: Data storage format
 
 ## 🎨 Styling
 
-The application uses:
-- **CSS Grid & Flexbox**: Modern layout techniques
-- **Font Awesome**: Icons for categories and UI elements
-- **Responsive Design**: Mobile-first approach
-- **Custom Properties**: Easy color theming
+The site uses a comprehensive design system with CSS custom properties for:
+- **Colors**: Primary, secondary, neutral (Rey theme colors)
+- **Typography**: Outfit font family (weights 300, 400, 700, 900)
+- **Spacing**: Consistent spacing scale
+- **Layout**: Responsive grid system
+- **Components**: Buttons, cards, sections
+
+## 📊 Data Files
+
+- `data/products.json`: Product catalog data
+- `data/categories.json`: Category information
+- `data/settings.json`: Site configuration
+
+## 🎯 Target Site Analysis
+
+This replica is based on the San Francisco demo from Rey theme (https://demos.reytheme.com/san-francisco/) with the following key components:
+
+- **Rey Theme Framework**: Custom CSS properties and components
+- **Elementor Sections**: Complex nested layouts
+- **WooCommerce Integration**: Product grids and e-commerce features
+- **WP Rocket Optimization**: Performance optimizations
+- **Outfit Font Family**: Modern typography
 
 ## 🚀 Deployment
 
-### Shared Hosting
-1. Upload all files to your web server
-2. Ensure PHP 8.x is available
-3. Point your domain to the `public/` directory
-4. Access your site at your domain
+### PHP Hosting
+1. Upload all files to your PHP hosting provider
+2. Ensure `public/` directory is set as web root
+3. Make sure PHP 8.0+ is available
+4. Configure URL rewriting if needed
 
 ### Docker (Optional)
 ```dockerfile
@@ -121,25 +114,29 @@ COPY . /var/www/html
 EXPOSE 80
 ```
 
-## 📝 Next Steps
+## 📝 Development History
 
-This MVP provides the foundation for a full e-commerce platform. Future enhancements could include:
+This project evolved from multiple approaches:
 
-- **Database Integration**: Replace JSON with MySQL/PostgreSQL
-- **User Authentication**: Login/registration system
-- **Shopping Cart**: Persistent cart with sessions
-- **Payment Processing**: Integration with payment gateways
-- **Order Management**: Admin order tracking
-- **Product Images**: File upload system
-- **Search & Filtering**: Advanced product search
-- **Reviews & Ratings**: Customer feedback system
+- **Original PHP**: Basic PHP implementation
+- **Eleventy Migration**: Static site generation attempt (deprecated)
+- **PHP Refinement**: Enhanced PHP with Rey theme classes
+- **Current State**: Optimized PHP implementation with modern features
+
+## 🔄 Key Improvements
+
+- **Rey Theme Classes**: Added `rey-siteWrapper`, `rey-siteHeader`, `rey-textScroller`
+- **Elementor Structure**: Implemented `elementor-section` classes
+- **Splide Integration**: Modern carousel functionality
+- **Complete Setup Section**: Added SITE/SHOP navigation
+- **Enhanced Styling**: Rey theme color variables and typography
 
 ## 🤝 Contributing
 
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Test locally
+4. Test locally: `php -S localhost:8000`
 5. Submit a pull request
 
 ## 📄 License
@@ -148,4 +145,4 @@ This project is for demonstration purposes. Feel free to use and modify as neede
 
 ---
 
-**Built with ❤️ using PHP, HTML5, CSS3, and JavaScript**
+**Built with ❤️ using PHP, modern CSS, and Rey theme design**

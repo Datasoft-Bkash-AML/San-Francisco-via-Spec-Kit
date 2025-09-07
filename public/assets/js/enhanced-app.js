@@ -3,6 +3,24 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('San Francisco Demo loaded with enhanced design system!');
 
+    // Initialize Splide text scroller
+    if (typeof Splide !== 'undefined') {
+        const textScrollerElement = document.querySelector('.rey-textScroller-items');
+        if (textScrollerElement) {
+            const textScroller = new Splide(textScrollerElement, {
+                type: 'fade',
+                autoplay: true,
+                interval: 4000,
+                delay: 2000,
+                customArrows: false,
+                speed: 1,
+                pauseOnHover: false,
+                resetProgress: false
+            });
+            textScroller.mount();
+        }
+    }
+
     // Enhanced Add to Cart functionality
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     addToCartButtons.forEach(button => {

@@ -6,31 +6,34 @@
     <title>San Francisco Demo - Premium Electronics</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 </head>
-<body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <span>FREE WORLDWIDE SHIPPING OVER $100</span>
-        </div>
-    </div>
-
-    <!-- Promo Ribbon -->
-    <div class="promo-ribbon">
-        <div class="container">
-            <span>LAST CALL: LOWEST PRICE GUARANTEE 50% OFF. <a href="#explore">EXPLORE</a></span>
+<body class="rey-siteWrapper">
+    <!-- Text Scroller -->
+    <div class="rey-textScroller">
+        <div class="rey-textScroller-items splide" data-slider-config='{"type":"fade","autoplay":true,"interval":4000,"delayInit":2000,"customArrows":false,"speed":1}'>
+            <div class="splide__track">
+                <div class="splide__list">
+                    <div class="splide__slide rey-textScroller-item">
+                        <span><p>FREE WORLDWIDE SHIPPING OVER $100</p></span>
+                    </div>
+                    <div class="splide__slide rey-textScroller-item">
+                        <span><p>LAST CALL: LOWEST PRICE GUARANTEE 50% OFF. <a href="#explore">EXPLORE</a></p></span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Header -->
-    <header class="header">
+    <header class="header rey-siteHeader">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <h1>San Francisco</h1>
                 </div>
-                <nav class="main-nav">
-                    <ul>
+                <nav class="main-nav rey-mainNavigation">
+                    <ul class="rey-mainMenu">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#shop">Shop</a></li>
                         <li><a href="#categories">Categories</a></li>
@@ -48,7 +51,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero elementor-section elementor-top-section rey-section-bg--classic elementor-section-boxed elementor-section-height-default elementor-section-height-default">
         <div class="container">
             <div class="hero-content">
                 <h2>Premium Electronics & Gadgets</h2>
@@ -58,8 +61,37 @@
         </div>
     </section>
 
+    <!-- Complete Your Setup Section -->
+    <section class="complete-setup elementor-section elementor-top-section rey-section-bg--classic elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+        <div class="container">
+            <div class="setup-content">
+                <h3 class="elementor-heading-title elementor-size-default">Complete your setup</h3>
+                <div class="setup-links">
+                    <div class="setup-section">
+                        <h5 class="elementor-heading-title elementor-size-default">SITE</h5>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="setup-section">
+                        <h5 class="elementor-heading-title elementor-size-default">SHOP</h5>
+                        <ul>
+                            <li><a href="#new-arrivals">New Arrivals</a></li>
+                            <li><a href="#categories">Categories</a></li>
+                            <li><a href="#brands">Brands</a></li>
+                            <li><a href="#sale">Sale</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Categories Section -->
-    <section id="categories" class="categories">
+    <section id="categories" class="categories elementor-section elementor-top-section rey-section-bg--classic elementor-section-boxed elementor-section-height-default elementor-section-height-default">
         <div class="container">
             <h3>Shop by Category</h3>
             <div class="categories-grid">
@@ -93,7 +125,7 @@
     </section>
 
     <!-- Discover / USP Strip -->
-    <section class="discover">
+    <section class="discover elementor-section elementor-top-section rey-section-bg--classic elementor-section-boxed elementor-section-height-default elementor-section-height-default">
         <div class="container">
             <div class="discover-content">
                 <h3>Complete Your Setup</h3>
@@ -144,7 +176,7 @@
     </section>
 
     <!-- Products Section -->
-    <section id="products" class="products">
+    <section id="products" class="products elementor-section elementor-top-section rey-section-bg--classic elementor-section-boxed elementor-section-height-default elementor-section-height-default">
         <div class="container">
             <h3>New Arrivals</h3>
             <div class="products-grid">
@@ -241,7 +273,7 @@
     </section>
 
     <!-- Available Categories Grid -->
-    <section class="available-categories">
+    <section class="available-categories elementor-section elementor-top-section rey-section-bg--classic elementor-section-boxed elementor-section-height-default elementor-section-height-default">
         <div class="container">
             <h3>Browse Categories</h3>
             <div class="categories-full-grid">
@@ -305,7 +337,7 @@
     </section>
 
     <!-- Flash Deals -->
-    <section class="flash-deals">
+    <section class="flash-deals elementor-section elementor-top-section rey-section-bg--classic elementor-section-boxed elementor-section-height-default elementor-section-height-default">
         <div class="container">
             <div class="section-header">
                 <h3>Flash Deals</h3>
@@ -580,6 +612,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="/assets/js/enhanced-app.js"></script>
 </body>
 </html>
